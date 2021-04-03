@@ -57,6 +57,7 @@ nuestra base de datos a acceder a nuestro listado de asteroides.
 
 ---------------------------------------------------------------------------------------------------------------------
 TODAS LAS RUTAS SON TOTALMENTE FUNCIONALES Y HAN SIDO TESTEADAS CON POSTMAN.
+![alt text](https://ibb.co/5v6BT38)
 ---------------------------------------------------------------------------------------------------------------------
 
 //LOADERS
