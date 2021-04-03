@@ -39,10 +39,48 @@ async function loginUser(req, res, next) {
   next();
 }
 
+async function deleteUser(req, res, next) {
+  const id = req.params.id;
+  await User.findByIdAndRemove(id)
+    .then((data) => {
+      if (!data) {
+        res.status(404).send({
+          message: `Cannot delete User with id=${id}.`,
+        });
+      } else {
+        res.send({
+          message: "User was deleted successfully!",
+        });
+      }
+    })
+    .catch((err) => {
+      res.status(500).send({
+        message: "Could not delete User with id=" + id,
+      });
+    });
+}
+
 async function listUsers(req, res, next) {
   const users = await User.find();
   res.send(users);
   next();
 }
 
-module.exports = { registerUser, loginUser, listUsers };
+async function updateUser(req, res, next) {
+  const id = req.params.id;
+  User.findByIdAndUpdate(id, req.body, { useFindAndModify: false })
+    .then((data) => {
+      if (!data) {
+        res.status(404).send({
+          message: `Cannot update User with id=${id}.`,
+        });
+      } else res.send({ message: "User was updated successfully." });
+    })
+    .catch((err) => {
+      res.status(500).send({
+        message: "Error updating User with id=" + id,
+      });
+    });
+}
+
+module.exports = { registerUser, loginUser, listUsers, deleteUser, updateUser };
