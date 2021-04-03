@@ -39,4 +39,10 @@ async function loginUser(req, res, next) {
   next();
 }
 
-module.exports = { registerUser, loginUser };
+async function listUsers(req, res, next) {
+  const users = await User.find();
+  res.send(users);
+  next();
+}
+
+module.exports = { registerUser, loginUser, listUsers };
