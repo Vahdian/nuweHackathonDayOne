@@ -83,7 +83,7 @@ para simplemente tener que cargar un archivo en app.js y que el codigo sea mas L
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
 Los parametros orbitales se han introducido en la base de datos Mongo mediante una libreria externa de conversion csv-json
-![Demo Animation](./images/database.png?raw=true)
+![alt text](https://ibb.co/hDvhMjq)
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #.env que no se incluira en el repositorio como podreis ver en .gitignore en el que constan el puerto de ejecucion, la uri de conexion con MongoAtlas y el token secret.
 En caso de querer comprobar las rutas con postman las instrucciones a seguir para hacer la API funcional seran:
