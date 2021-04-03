@@ -5,6 +5,7 @@
 *Hackathon NUWE: Hack that startUp
 
 -----------------------------------------------------------------------------------------------------------------
+
 //EJECUCION
 
 Para iniciar la API puedes ejecutarla con los siguientes comandos:
@@ -12,6 +13,7 @@ Para iniciar la API puedes ejecutarla con los siguientes comandos:
    -npm run dev: Para ejecutarla en modo development (Carga nodemon y dotenv para la lectura del puerto en el .env)
 
 ------------------------------------------------------------------------------------------------------------------
+
 Contenido de la API:
 
 //CONTROLLERS
